@@ -68,7 +68,6 @@ function generateCircle() {
   // 添加控制器
   const controls = new OrbitControls(camera, renderer.domElement);
 
-
   // 添加场景
   const scene = new $THREE.Scene();
   const shape = new $THREE.Shape();
@@ -84,14 +83,10 @@ function generateCircle() {
 
   const extrudeSettings = {
     steps: 10,
-
     depth: 4.0,
-
     bevelEnabled: true,
     bevelThickness: 0.77,
-
     bevelSize: 1.29,
-
     bevelSegments: 4,
   };
 

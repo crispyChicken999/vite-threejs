@@ -1,4 +1,4 @@
-import * as ElementPlus from 'element-plus/dist/index.full'
+import * as ElementPlus from 'element-plus/dist/index.full.mjs'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 export default defineNuxtPlugin((nuxtApp) => {
