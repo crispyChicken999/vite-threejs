@@ -10,12 +10,15 @@
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.4",
+    "@nuxt/devtools": "^0.4.5",
     "@types/node": "^18",
     "element-plus": "^2.3.4",
     "nuxt": "^3.4.3",
     "sass": "^1.62.1"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "lil-gui": "^0.18.1",
     "three": "^0.152.2"
   }
 }
