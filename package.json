@@ -14,7 +14,10 @@
     "@types/node": "^18",
     "element-plus": "^2.3.4",
     "nuxt": "^3.4.3",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "unplugin-auto-import": "^0.15.3",
+    "unplugin-icons": "^0.16.1",
+    "unplugin-vue-components": "^0.24.1"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",

@@ -26,7 +26,7 @@
           ><el-icon color="#1989fa"><RefreshRight /></el-icon
         ></el-button>
         <el-button @click="addCubes">Add Cubes</el-button>
-        <el-checkbox v-model="isEnableFog">Enable Fog</el-checkbox>
+        <el-checkbox v-model="isFogEnable">Enable Fog</el-checkbox>
       </p>
     </div>
   </div>
@@ -63,7 +63,7 @@ const cubes = ref([
   [0, 0, 0],
   [5, 0, 0],
 ]);
-const isEnableFog = ref(false);
+const isFogEnable = ref(false);
 
 function resetSetting() {
   controls.value.first.x = 0;
@@ -119,7 +119,7 @@ function generateCube() {
   }
   let gui;
   watchEffect(() => {
-    if (isEnableFog.value) {
+    if (isFogEnable.value) {
       scene.fog = new $THREE.Fog("lightblue", 2, 20);
       scene.background = new $THREE.Color("lightblue");
       gui = new GUI({ container: container.value });
