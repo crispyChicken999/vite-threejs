@@ -38,24 +38,6 @@ export default defineNuxtConfig({
           drop_debugger: true,
         },
       },
-      // rollupOptions: {
-      //   output: {
-      //     manualChunks(id) {
-      //       if (id.includes("node_modules")) {
-      //         return id
-      //           .toString()
-      //           .split("node_modules/")[1]
-      //           .split("/")[0]
-      //           .toString();
-      //       }
-      //     },
-      //     // chunkFileNames: (chunkInfo) => {
-      //     //   // 替换name里面的_为空
-      //     //   chunkInfo.name = chunkInfo.name.replace(/_/g, "");
-      //     //   return `[name].[hash].js`;
-      //     // },
-      //   },
-      // },
     },
     plugins: [
       AutoImport({
