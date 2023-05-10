@@ -47,7 +47,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watchPostEffect } from "vue";
+import { onMounted, ref } from "vue";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 const { $THREE: THREE } = useNuxtApp();
 const options = ref({
@@ -191,10 +191,14 @@ onMounted(() => {
 }
 
 .controllers {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
   gap: 10px;
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  padding: 30px 10px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   > div {
     flex: 1;
     gap: 10px;
