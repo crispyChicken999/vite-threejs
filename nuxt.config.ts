@@ -7,6 +7,7 @@ import IconsResolver from "unplugin-icons/resolver";
 
 export default defineNuxtConfig({
   app: {
+    baseURL:"/vite-threejs",
     buildAssetsDir: "/static/",
   },
 
