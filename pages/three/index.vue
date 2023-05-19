@@ -2,6 +2,7 @@
   <el-button @click="$router.push('/')">Back to homepage</el-button>
   <el-button @click="$router.push('/three/tank')">Switch To Tank Playground</el-button>
   <el-button @click="$router.push('/three/solarSystem')">Switch To SolarSystem Playground</el-button>
+  <el-button @click="$router.push('/three/lights')">Switch To Lights Playground</el-button>
   <div class="msg">Hello ThreeJs!</div>
   <div class="controls">
     <div class="first-control">
