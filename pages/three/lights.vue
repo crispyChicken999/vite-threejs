@@ -11,7 +11,11 @@
       <el-radio-button label="spot">Spot Light</el-radio-button>
     </el-radio-group>
   </div>
-  <div class="container">
+  <div
+    class="container"
+    v-loading="isLoading"
+    element-loading-text="正在加载材质..."
+  >
     <canvas id="lights"></canvas>
   </div>
 </template>
@@ -34,6 +38,9 @@ useHead({
 
 // 当前选中的光源
 const selectedLight = ref("ambient");
+
+// 是否正在加载材质
+let isLoading = ref(true);
 
 // 生成光源
 function generateLights() {
@@ -59,8 +66,15 @@ function generateLights() {
 
   const planeSize = 40;
   const loader = new THREE.TextureLoader();
+
   const texture = loader.load(
-    "https://threejs.org/manual/examples/resources/images/checker.png"
+    "https://threejs.org/manual/examples/resources/images/checker.png",
+    () => {
+      isLoading.value = false;
+    },
+    () => {
+      isLoading.value = true;
+    }
   );
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
