@@ -2,6 +2,8 @@
   <el-button @click="$router.push('three')"
     >Switch To ThreeJs Playground</el-button
   >
+  <el-button @click="$router.push('/button/1')">Switch to button demo 1</el-button>
+  <el-button @click="$router.push('/button/2')">Switch to button demo 2</el-button>
   <div class="msg">My message to the world is:{{ msg }}</div>
   <div class="count">Let's count:{{ count }}</div>
   <div class="headtitle">Headtitle is:{{ headTitle }}</div>

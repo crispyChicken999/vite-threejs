@@ -4,10 +4,12 @@ import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
+import path from "path";
 
 export default defineNuxtConfig({
   app: {
-    baseURL:"/vite-threejs",
+    baseURL: "/vite-threejs",
     buildAssetsDir: "/static/",
   },
 
@@ -42,10 +44,7 @@ export default defineNuxtConfig({
     },
     plugins: [
       AutoImport({
-        resolvers: [
-          ElementPlusResolver(),
-          IconsResolver(),
-        ],
+        resolvers: [ElementPlusResolver(), IconsResolver()],
       }),
       Components({
         resolvers: [
@@ -57,6 +56,9 @@ export default defineNuxtConfig({
       }),
       Icons({
         autoInstall: true,
+      }),
+      createSvgIconsPlugin({
+        iconDirs: [path.resolve(process.cwd(), "assets/svg")],
       }),
     ],
   },
